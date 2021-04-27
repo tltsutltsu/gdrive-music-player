@@ -8,6 +8,7 @@
 	.mainwrap {
 		background: #123b48;
 		border-radius: 5px;
+		color: white;
 	}
 
 	.audiowrap,
@@ -42,6 +43,8 @@
 
 	.plItem {
 	position:relative;
+	    color: white;
+    	font-family: sans-serif;
 	}
 
 	.plTitle {
@@ -169,3 +172,4 @@
 	.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
 	  background: #f18230;
 	}
+
