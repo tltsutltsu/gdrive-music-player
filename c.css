@@ -173,3 +173,9 @@
 	  background: #f18230;
 	}
 
+#allrecords a {
+    color: white;
+}
+#allrecords a:hover {
+    color: #f18230;
+}
