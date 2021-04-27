@@ -171,6 +171,8 @@ function init(selId) {
                 index = id;
                 audio.src = tracks[id].file;
                 updateDownload(id, audio.src);
+                $('#mainwrap'+selId+' [data-plyr="download"]')
+                    .attr('download', tracks[id].name+".mp3");
             },
             updateDownload = function (id, source) {
                 player.on('loadedmetadata', function () {
@@ -190,4 +192,22 @@ function init(selId) {
         var noSupport = $('#audio1'+selId).text();
         $('.container').append('<p class="no-support">' + noSupport + '</p>');
     }
+
+    $('a[data-plyr=download').on('click', function(e){
+        alert('Загружаем...')
+        fetch($(this).attr('href'))
+              .then(resp => resp.blob())
+              .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = $(this).attr('download');
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+              })
+              .catch(() => alert('Ошибка загрузки'));
+                  return false;
+        });
 };
