@@ -1,0 +1,171 @@
+	/* Audio Player Styles
+	================================================== */
+
+	audio {
+	display:none;
+	}
+
+	.mainwrap {
+		background: #123b48;
+		border-radius: 5px;
+	}
+
+	.audiowrap,
+	.plwrap {
+	margin:0 auto;
+	}
+
+	.tracks {
+	font-size:0;
+	position:relative;
+	text-align:center;
+	}
+
+	.plList {
+		max-height: 250px;
+    	overflow-y: auto;
+    	border-radius: 10px;
+    	padding: 0;
+    	margin:0;
+	}
+
+	.plList li {
+	cursor:pointer;
+	display:block;
+	margin:0;
+	padding:21px 0;
+	}
+
+	.plList li:hover {
+	background-color:rgba(0, 0, 0, .1);
+	}
+
+	.plItem {
+	position:relative;
+	}
+
+	.plTitle {
+	left:50px;
+	overflow:hidden;
+	position:absolute;
+	right:65px;
+	text-overflow:ellipsis;
+	top:0;
+	white-space:nowrap;
+	}
+
+	.plNum {
+	padding-left:21px;
+	width:25px;
+	}
+
+	.plLength {
+	padding-left:21px;
+	position:absolute;
+	right:21px;
+	top:0;
+	}
+
+	.plSel,
+	.plSel:hover {
+	background-color:rgba(0, 0, 0, .1);
+	color:#fff;
+	cursor:default !important;
+	}
+
+	.tracks a, .b {
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2em;
+    height: 1.1em;
+    line-height: .2;
+    padding: 12px 4px;
+    text-decoration: none;
+    transition: all .3s ease;
+	}
+
+	.tracks a:hover,
+	.tracks a:active,
+	.b:hover, .b:active {
+		background-color:rgba(0, 0, 0, .1);
+		color: #f18230;
+	}
+
+	.plyr__control {
+		transition: all .3s ease;
+	}
+	.plyr__control:hover {
+		background-color:rgba(0, 0, 0, .1);
+		color: #f18230 !important;
+	}
+
+	.tracks a::-moz-focus-inner, .b::-moz-focus-inner {
+	border:0;
+	padding:0;
+	}
+
+	.plSel .plNum {
+    	border-bottom: 1px solid white;
+	}
+
+
+	/* Plyr Overrides
+	================================================== */
+
+	.plyr--audio .plyr__controls {
+	background-color:transparent;
+	border:none;
+	color:#fff;
+	font-family:"Source Sans Pro", arial, sans-serif;
+	padding:20px 20px 20px 13px;
+	width:100%;
+	}
+
+	a.plyr__controls__item.plyr__control:hover,
+	.plyr--audio .plyr__controls button:hover,
+	.plyr--audio .plyr__controls button.tab-focus:focus,
+	.plyr__play-large {
+	background-color:rgba(0, 0, 0, .1);
+	}
+
+	.plyr__progress--played,
+	.plyr__volume--display {
+	color:rgba(0, 0, 0, .1);
+	}
+
+	.plyr--audio .plyr__progress--buffer,
+	.plyr--audio .plyr__volume--display {
+	background-color:rgba(0, 0, 0, .1);
+	}
+
+	.plyr--audio .plyr__progress--buffer {
+	color:rgba(0, 0, 0, .1);
+	}
+
+	.plyr--full-ui input[type="range"] {
+	/*width:calc(100% - 39px);*/
+	}
+
+	.plyr__controls .plyr__controls__item.plyr__time {
+	font-size:14px;
+	margin-left:7px;
+	}
+
+
+	.plyr--full-ui input[type=range] {
+	  color: #f18230;
+	}
+
+	.plyr__control--overlaid {
+	  background: rgba(#f18230, .8);
+	}
+
+	.plyr__control.plyr__tab-focus {
+	  box-shadow: 0 0 0 5px rgba(#f18230, .5);
+	}
+
+	.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+	  background: #f18230;
+	}
